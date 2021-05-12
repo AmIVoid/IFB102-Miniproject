@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IFB102 Mini-project</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="heading">YouTubeDL</h1>
+        <p class="description">Downloads videos straight from youtube.</p>
+    </div>
+
+    <div class="form-container">
+        <form method="POST" class="selector">
+            <input class="input-box" name="url" placeholder="Enter youtube URL" value={{ text }}>
+        </form>
+
+        <br><br>
+
+        <form method="POST" class="selector centered">
+            <label class="main-label">Select video quality</label><br>
+            <input type="radio" name="quality" value="360p">
+            <label for="360p">360p</label><br>
+            <input type="radio" name="quality" value="480p">
+            <label for="480p">480p</label><br>
+            <input type="radio" name="quality" value="720p">
+            <label for="720p">720p</label><br>
+            <input type="radio" name="quality" value="1080p">
+            <label for="1080p">1080p</label><br>
+            <input class="small-button" type="submit" action="/youtubedl" value="Confirm video quality">
+        </form>
+
+        <br><br>
+
+        <form class="centered" action="/youtubedl/download" method="POST">
+            <button type="submit" class="small-button">Start download</button>
+        </form>
+
+        <h1>{{ quality }}</h1>
+    </div>
+</body>
+
+</html>

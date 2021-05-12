@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IFB102 Mini-project</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1 class="heading">Waifu2x</h1>
+    <p class="description">Upscales images by 2x and removes noise artifacts.</p>
+  </div>
+
+  <div class="form-container">
+
+    <form class="centered" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file1">
+      <input class="small-button" type="submit" value="Upload Image">
+    </form>
+
+    <h1 class="heading">{{ outcome }}</h1>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/* static/style.css */
+
+* {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/*body {
+    background-color: #15161c;
+}*/
+
+.header {
+    max-width: 1000px;
+    max-height: 210px;
+    overflow: hidden;
+    clear: both;
+    display: block;
+    margin: auto;
+}
+
+.heading {
+    color:#FFF;
+    text-shadow: 5px 5px #000;
+    font-size: 50px;
+    text-align: center;
+}
+
+.small-heading {
+    color:#FFF;
+    text-shadow: 5px 5px #000;
+    font-size: 30px;
+    text-align: center;
+}
+
+.mini-heading {
+    color:#FFF;
+    text-shadow: 5px 5px #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.description {
+    color:#FFF;
+    text-shadow: 3px 3px #000;
+    font-size: 30px;
+    text-align: center;
+}
+
+.button-container {
+    max-width: 1920px;
+    overflow: hidden;
+    clear: both;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.button {
+    margin: 35px;
+    width: 600px;
+    height: 200px;
+    font-size: 100px;
+    text-shadow: 5px 5px #000;
+    color: white;
+    text-align: center;
+}
+
+.button a {
+    color:white;
+    text-decoration: none;
+}
+
+.form-container {
+    max-width: 800px;
+    display: block;
+    margin: auto;
+    justify-content: center;
+}
+
+.selector {
+    font-size: 20px;
+    color: white;
+    text-shadow: 3px 3px #000;
+}
+
+.input-box {
+    /*background-color: #282a36;*/
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 800px;
+    height: 30px;
+}
+
+.main-label {
+    font-size: 30px;
+}
+
+.centered {
+    overflow: hidden;
+    clear: both;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.small-button {
+    margin: 35px;
+    width: 500px;
+    height: 100px;
+    font-size: 50px;
+    text-shadow: 5px 5px #000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.small-button a {
+    color:white;
+    text-decoration: none;
+}

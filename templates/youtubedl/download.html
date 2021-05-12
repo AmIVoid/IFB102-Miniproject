@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IFB102 Mini-project</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="heading">YouTubeDL</h1>
+        <p class="description">Downloads videos straight from youtube.</p>
+    </div>
+
+    <div class="form-container">
+
+        <h1 class="heading">Video has been downloaded</h1>
+
+        <br><br>
+
+        <h1 class="description">Would you like to download another video?</>
+
+            <br><br>
+
+            <form class="centered" action="/youtubedl/file" method="POST">
+                <button type="submit" class="small-button">Download video</button>
+            </form>
+
+            <button type="submit" class="small-button"><a class="small-button" href="/youtubedl">Download another</a></button>
+
+    </div>
+</body>
+
+</html>

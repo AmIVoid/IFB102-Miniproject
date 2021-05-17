@@ -2,6 +2,7 @@ import youtube_dl
 import os
 from datetime import datetime
 from youtube_dl.YoutubeDL import YoutubeDL
+from st_management import manageFiles
 
 def download(url, quality):
 
@@ -42,4 +43,5 @@ def download(url, quality):
             log = open('logs/video_log.txt', 'w+')
             log.write(f'{datetime.now()} \'{filename}\'\n')
             log.close()
+        manageFiles(r'.\downloaded_videos')
         return filename

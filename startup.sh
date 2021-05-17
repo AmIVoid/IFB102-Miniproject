@@ -3,6 +3,7 @@ echo "Creating required folders."
 mkdir -p downloaded_videos
 mkdir -p output_images
 mkdir -p uploaded_images
+mkdir -p logs
 echo "Folders created."
 echo ""
 echo "Installing required libraries."

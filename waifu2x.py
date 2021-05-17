@@ -2,6 +2,7 @@ from PIL import Image
 import os
 from datetime import datetime
 import os
+from st_management import manageFiles
 
 def upscale(image_path):
     image = Image.open(image_path)
@@ -17,4 +18,6 @@ def upscale(image_path):
         log.write(f'{datetime.now()} \'{outfile}\'\n')
         log.close()
     image.save(outfile)
+    manageFiles(r'.\uploaded_images')
+    manageFiles(r'.\output_images')
     return(outfile)

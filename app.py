@@ -31,11 +31,11 @@ def getURL():
     url = request.form['url']
     return render_template("youtubedl.html", text=url)
 
-@app.route('/youtubedl', methods=['POST'])
+@app.route('/youtubedl/quality', methods=['POST'])
 def getQuality():
     global quality
     quality = request.form['quality']
-    return render_template("youtubedl.html", quality=quality)
+    return render_template("youtubedl.html")
 
 @app.route('/youtubedl/download', methods=['GET', 'POST'])
 def sendDownload():
@@ -70,10 +70,8 @@ def upload_file():
         file1 = request.files['file1']
         path = os.path.join(app.config['UPLOAD_FOLDER'], file1.filename)
         file1.save(path)
-        print('File recieved')
         outfile = upscale(path)
         return send_file(f'{outfile}', mimetype="img/jpg", as_attachment=True)
-        #return render_template("waifu2x.html", outcome="File uploaded")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

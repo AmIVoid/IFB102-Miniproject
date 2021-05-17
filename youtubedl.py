@@ -1,4 +1,6 @@
 import youtube_dl
+import os
+from datetime import datetime
 from youtube_dl.YoutubeDL import YoutubeDL
 
 def download(url, quality):
@@ -31,6 +33,13 @@ def download(url, quality):
     
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
-        #ydl.download([url])
         filename = ydl.prepare_filename(info)
+        if os.path.isfile('logs/video_log.txt'):
+            log = open('logs/video_log.txt', 'a')
+            log.write(f'{datetime.now()} \'{filename}\'\n')
+            log.close()
+        else:
+            log = open('logs/video_log.txt', 'w+')
+            log.write(f'{datetime.now()} \'{filename}\'\n')
+            log.close()
         return filename

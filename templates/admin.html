@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IFB102 Mini-project Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="heading">Admin dashboard</h1>
+    </div>
+
+    <table class="log-table centered">
+        <tr>
+            <th class="log-head">Video log</th>
+        </tr>
+        {% for v_log in v_log_file %}
+        <tr>
+            <td class="log-info">{{v_log}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <br>
+
+    <table class="log-table centered">
+        <tr>
+            <th class="log-head">Image log</th>
+        </tr>
+        {% for i_log in i_log_file %}
+        <tr>
+            <td class="log-info">{{i_log}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

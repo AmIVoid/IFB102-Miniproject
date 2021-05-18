@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, flash, redirect, url_for, make_response
 from flask.helpers import send_file
-from flask import Response
-from youtubedl import download
+from youtubedl import ytDownload
 from waifu2x import upscale
 import os
 
 url = ''
 quality = ''
+username = ''
 UPLOAD_FOLDER = './uploaded_images'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
@@ -47,7 +47,7 @@ def renderPage():
 
 @app.route('/youtubedl/file', methods=['GET', 'POST'])
 def sendFile():
-    returnFile = download(url, quality)
+    returnFile = ytDownload(url, quality)
     return send_file(f'{returnFile}', mimetype="video/H264", as_attachment=True)
 
 # Waifu2x Pages
@@ -72,6 +72,25 @@ def upload_file():
         file1.save(path)
         outfile = upscale(path)
         return send_file(f'{outfile}', mimetype="img/jpg", as_attachment=True)
+    
+# Admin Pages
+
+@app.route('/admin')
+def showLogin():
+    return render_template("admin-login.html")
+
+@app.route('/admin', methods=['POST'])
+def adminLogin():
+    global pin
+    pin = request.form['pin']
+    if pin == '6969':
+        with open("./logs/video_log.txt", "r", encoding="UTF-8") as v_log:
+            video_info = v_log.read().split('\n')
+        with open("./logs/image_log.txt", "r", encoding="UTF-8") as i_log:
+            image_info = i_log.read().split('\n')
+        return render_template("admin.html", v_log_file=video_info, i_log_file=image_info)
+    else:
+        return render_template("admin-login.html", state='Incorrect pin')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

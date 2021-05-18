@@ -12,11 +12,11 @@ def upscale(image_path):
     sendMessage(f'**{os.path.basename(image_path)}** was just upscaled.')
     if os.path.isfile('logs/image_log.txt'):
         log = open('logs/image_log.txt', 'a')
-        log.write(f'{datetime.now()} \'{outfile}\'\n')
+        log.write(f'\n{datetime.now()} \'{outfile}\'')
         log.close()
     else:
         log = open('logs/image_log.txt', 'w+')
-        log.write(f'{datetime.now()} \'{outfile}\'\n')
+        log.write(f'{datetime.now()} \'{outfile}\'')
         log.close()
     image.save(outfile)
     manageFiles(r'.\uploaded_images')

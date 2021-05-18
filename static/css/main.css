@@ -18,28 +18,28 @@ body {
 }
 
 .heading {
-    color:#FFF;
+    color: #FFF;
     text-shadow: 5px 5px #000;
     font-size: 50px;
     text-align: center;
 }
 
 .small-heading {
-    color:#FFF;
+    color: #FFF;
     text-shadow: 5px 5px #000;
     font-size: 30px;
     text-align: center;
 }
 
 .mini-heading {
-    color:#FFF;
+    color: #FFF;
     text-shadow: 5px 5px #000;
     font-size: 20px;
     text-align: center;
 }
 
 .description {
-    color:#FFF;
+    color: #FFF;
     text-shadow: 3px 3px #000;
     font-size: 30px;
     text-align: center;
@@ -65,7 +65,7 @@ body {
 }
 
 .button a {
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
@@ -114,10 +114,44 @@ body {
 }
 
 .small-button a {
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
 .file-input {
     color: #FFF
+}
+
+.input {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.log-table {
+    width: 1500px;
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+}
+
+.log-head {
+    font-size: 20px;
+    border: 1px solid #FFF;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+    color: #FFF;
+}
+
+.log-info {
+    font-size: 16px;
+    border: 1px solid #FFF;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+    color: #FFF;
 }

@@ -4,9 +4,9 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-/*body {
+body {
     background-color: #15161c;
-}*/
+}
 
 .header {
     max-width: 1000px;
@@ -116,4 +116,8 @@
 .small-button a {
     color:white;
     text-decoration: none;
+}
+
+.file-input {
+    color: #FFF
 }

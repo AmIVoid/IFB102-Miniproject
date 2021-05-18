@@ -2,3 +2,5 @@ flask
 youtube_dl
 pillow
 json
+requests
+dhooks

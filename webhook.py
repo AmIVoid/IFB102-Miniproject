@@ -1,6 +1,10 @@
+import json
 from dhooks import Webhook
 
-hook = Webhook('https://discord.com/api/webhooks/844032616532934667/Oju-XiN5e3eFPwxlosFopHgtlJitmWC0JuIEoR1I8NrKNk48vFfQz8atL4zThR1rqKX6')
+with open('config.json') as config:
+    data = json.load(config)
+    hookurl = data['webhook']
+    hook = Webhook(hookurl)
 
 def sendMessage(message):
     hook.send(message)

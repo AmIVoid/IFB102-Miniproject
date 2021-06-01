@@ -19,6 +19,6 @@ def upscale(image_path):
         log.write(f'{datetime.now()} \'{outfile}\'')
         log.close()
     image.save(outfile)
-    manageFiles(r'.\uploaded_images')
-    manageFiles(r'.\output_images')
+    manageFiles(r'./uploaded_images')
+    manageFiles(r'./output_images')
     return(outfile)

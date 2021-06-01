@@ -47,5 +47,5 @@ def ytDownload(url, quality):
             log = open('logs/video_log.txt', 'w+', encoding='utf-8')
             log.write(f'{datetime.now()} \'{filename}\'')
             log.close()
-        manageFiles(r'.\downloaded_videos')
+        manageFiles(r'./downloaded_videos')
         return filename

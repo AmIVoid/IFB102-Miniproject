@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IFB102 Mini-project</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="heading">TwitterDL</h1>
+        <p class="description">Downloads videos straight from Twitter.</p>
+    </div>
+
+    <div class="form-container">
+        <form method="POST" class="selector">
+            <input class="input-box" name="url" placeholder="Enter twitter URL" value={{ text }}>
+        </form>
+
+        <br><br>
+
+        <form class="centered" action="/twitterdl/download" method="POST">
+            <button type="submit" class="small-button">Start download</button>
+        </form>
+    </div>
+</body>
+
+</html>
